@@ -3,14 +3,14 @@ import { ArrowRight } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-gray-950 py-12 text-white">
+    <footer className="border-t border-white/10 bg-slate-950 py-12 text-white">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 md:flex-row">
         <div className="flex items-center gap-2">
           <span className="text-xl font-bold">WireDrop</span>
-          <span className="text-sm text-gray-500">© 2025</span>
+          <span className="text-sm text-slate-500">© 2025</span>
         </div>
 
-        <div className="flex gap-8 text-sm text-gray-400">
+        <div className="flex gap-8 text-sm text-slate-400">
           <a
             href="#"
             id="footer-privacy"
@@ -22,7 +22,7 @@ export default function Footer() {
             Terms
           </a>
           <a
-            href="https://github.com/AayushKP/p2p-sharing"
+            href="https://github.com/kingshere/WireDrop"
             id="footer-github"
             className="hover:text-white transition"
           >
@@ -38,7 +38,7 @@ export default function Footer() {
         <Link
           to="/app"
           id="footer-cta-launch"
-          className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-3 font-semibold text-black transition hover:bg-gray-200"
+          className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-3 font-semibold text-slate-950 transition hover:bg-slate-200"
         >
           Launch App
           <ArrowRight className="h-4 w-4" />

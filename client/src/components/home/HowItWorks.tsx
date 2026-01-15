@@ -37,10 +37,10 @@ const detailedSteps = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="relative bg-black py-24 text-white overflow-hidden">
+    <section id="how-it-works" className="relative bg-slate-950 py-24 text-white overflow-hidden">
        {/* Decorative gradient */}
-       <div className="absolute top-0 right-0 -mr-20 -mt-20 h-96 w-96 rounded-full bg-blue-900/20 blur-3xl" />
-       <div className="absolute bottom-0 left-0 -ml-20 -mb-20 h-96 w-96 rounded-full bg-purple-900/20 blur-3xl" />
+       <div className="absolute top-0 right-0 -mr-20 -mt-20 h-96 w-96 rounded-full bg-emerald-900/20 blur-3xl" />
+       <div className="absolute bottom-0 left-0 -ml-20 -mb-20 h-96 w-96 rounded-full bg-cyan-900/20 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="mb-20 text-center">
@@ -57,7 +57,7 @@ export default function HowItWorks() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="mt-4 text-xl text-gray-400"
+            className="mt-4 text-xl text-slate-400"
           >
              From handshake to download, completely serverless.
           </motion.p>
@@ -66,7 +66,7 @@ export default function HowItWorks() {
         {/* Vertical Timeline for Desktop / Stack for Mobile */}
         <div className="relative">
              {/* Connector Line (Desktop) */}
-             <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-gradient-to-b from-blue-500/0 via-blue-500/50 to-blue-500/0 md:block" />
+             <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-gradient-to-b from-emerald-500/0 via-emerald-500/50 to-emerald-500/0 md:block" />
 
              <div className="space-y-12 md:space-y-24">
                 {detailedSteps.map((step, i) => (
@@ -82,15 +82,15 @@ export default function HowItWorks() {
                     >
                         {/* Content */}
                         <div className="flex-1 text-center md:text-left">
-                            <div className={`p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-colors ${i % 2 === 0 ? "md:text-left" : "md:text-right"}`}>
-                                <h3 className="mb-2 text-xl font-bold text-blue-400">{step.title}</h3>
-                                <p className="text-gray-300 leading-relaxed">{step.desc}</p>
+                            <div className={`p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-emerald-500/30 transition-colors ${i % 2 === 0 ? "md:text-left" : "md:text-right"}`}>
+                                <h3 className="mb-2 text-xl font-bold text-emerald-400">{step.title}</h3>
+                                <p className="text-slate-300 leading-relaxed">{step.desc}</p>
                             </div>
                         </div>
 
                         {/* Icon Node */}
-                        <div className="relative z-10 flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-black border border-blue-500/50 shadow-[0_0_20px_rgba(59,130,246,0.3)]">
-                            <step.icon size={28} className="text-blue-400" />
+                        <div className="relative z-10 flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-slate-950 border border-emerald-500/50 shadow-[0_0_20px_rgba(16,185,129,0.3)]">
+                            <step.icon size={28} className="text-emerald-400" />
                         </div>
 
                         {/* Spacer for alignment */}

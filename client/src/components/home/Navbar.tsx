@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-black/50 backdrop-blur-md">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-slate-950/50 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link to="/" id="nav-logo" className="text-xl font-bold tracking-tight text-white">
           WireDrop
@@ -12,7 +12,7 @@ export default function Navbar() {
           <a
             href="#how-it-works"
             id="nav-how-it-works"
-            className="hidden text-sm font-medium text-gray-400 transition hover:text-white md:block"
+            className="hidden text-sm font-medium text-slate-400 transition hover:text-white md:block"
             onClick={(e) => {
               e.preventDefault();
               document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
@@ -23,7 +23,7 @@ export default function Navbar() {
           <Link
             to="/app"
             id="nav-start-sharing"
-            className="group flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-black transition hover:bg-gray-200"
+            className="group flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-slate-950 transition hover:bg-slate-200"
           >
             Start Sharing
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
