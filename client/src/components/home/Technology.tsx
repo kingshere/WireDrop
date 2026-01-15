@@ -3,11 +3,11 @@ export default function Technology() {
       <section className="bg-slate-950 py-24 text-center text-white">
         <div className="mx-auto max-w-4xl px-6">
           <h2 className="mb-8 text-2xl font-bold tracking-tight md:text-3xl">
-            Under the Hood
+            Behind the scenes
           </h2>
           <div className="rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12">
             <p className="text-lg leading-relaxed text-slate-300">
-              WireDrop uses <span className="text-emerald-400 font-medium">WebSockets</span> purely for signaling and peer discovery. 
+              WireDrop uses <span className="text-emerald-400 font-medium">WebSockets</span> only for signaling and peer discovery. 
               Once connected, all file data flows directly between peers using <span className="text-cyan-400 font-medium">WebRTC DataChannels</span>.
               There is <span className="text-white font-semibold">no server-side file handling or storage</span>.
             </p>
