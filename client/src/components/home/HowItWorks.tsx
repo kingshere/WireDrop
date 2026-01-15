@@ -6,32 +6,32 @@ const detailedSteps = [
   {
     icon: Users,
     title: "1. Peer Discovery",
-    desc: "Both users connect to the signaling server via WebSockets to find each other in the 'Online Users' list.",
+    desc: "Both users connect to the signaling server via WebSocket in order to find each other in the Online Users list.",
   },
   {
     icon: Radio,
-    title: "2. Signaling",
-    desc: "A connection request is sent. Once accepted, WebRTC offers, answers, and ICE candidates are exchanged.",
+    title: "2. Communication",
+    desc: "There's a connection request. WebRTC offers, responses, and ICE candidates are shared after acceptance.",
   },
   {
     icon: Zap,
-    title: "3. Direct Link",
-    desc: "A DataChannel is established. The WebSocket connection is no longer needed for file transfer.",
+    title: "3. Direct Connection",
+    desc: "A DataChannel is created. File transfers no longer require a WebSocket connection.",
   },
   {
     icon: Database,
     title: "4. Chunking",
-    desc: "The file is read in 64KB chunks using FileReader to ensure large files don't crash the browser.",
+    desc: "To prevent large files from crashing the browser, FileReader is used to read the file in 64KB chunks.",
   },
   {
     icon: FileUp,
     title: "5. Backpressure",
-    desc: "WireDrop monitors the bufferedAmount to pause/resume sending, ensuring optimal network usage.",
+    desc: "In order to ensure optimal network usage, WireDrop keeps an eye on the bufferedAmount to pause and resume sending.",
   },
   {
     icon: CheckCircle,
-    title: "6. Reassembly",
-    desc: "The receiver collects chunks, tracks progress, and rebuilds the file locally once complete.",
+    title: "6. Reassembling",
+    desc: "The recipient gathers fragments, monitors development, and, when finished, rebuilds the file locally.",
   },
 ];
 
@@ -50,7 +50,7 @@ export default function HowItWorks() {
             viewport={{ once: true }}
             className="text-3xl font-bold tracking-tight md:text-5xl"
           >
-            How It Works
+            How It Operates
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -59,7 +59,7 @@ export default function HowItWorks() {
             transition={{ delay: 0.1 }}
             className="mt-4 text-xl text-slate-400"
           >
-             From handshake to download, completely serverless.
+             Completely serverless, from handshake to download.
           </motion.p>
         </div>
 

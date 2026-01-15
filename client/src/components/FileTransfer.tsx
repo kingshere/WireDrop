@@ -64,26 +64,26 @@ export default function FileTransfer() {
   }
 
   return (
-    <div className="w-full max-w-md md:max-w-lg bg-gray-900 border border-gray-800 rounded-2xl shadow-2xl p-6 md:p-8 space-y-8 relative overflow-hidden">
+    <div className="w-full max-w-md md:max-w-lg bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl p-6 md:p-8 space-y-8 relative overflow-hidden">
       {/* Glow effect */}
-      <div className="absolute top-0 right-0 -mt-10 -mr-10 w-32 h-32 bg-blue-500/20 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-0 -mt-10 -mr-10 w-32 h-32 bg-emerald-500/20 rounded-full blur-3xl pointer-events-none" />
 
       <div className="flex items-center justify-between relative z-10">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-gray-800 rounded-lg border border-gray-700">
-            <Share2 className="text-gray-300" size={20} />
+          <div className="p-2 bg-slate-800 rounded-lg border border-slate-700">
+            <Share2 className="text-slate-300" size={20} />
           </div>
           <div>
             <h3 className="text-xl font-bold text-white">File Transfer</h3>
-            <p className="text-xs text-gray-500">Secure P2P Channel</p>
+            <p className="text-xs text-slate-500">Secure P2P Channel</p>
           </div>
         </div>
 
         <span
           className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium border ${
             isCaller
-              ? "bg-blue-500/10 text-blue-400 border-blue-500/20"
-              : "bg-green-500/10 text-green-400 border-green-500/20"
+              ? "bg-emerald-500/10 text-emerald-400 border-emerald-500/20"
+              : "bg-cyan-500/10 text-cyan-400 border-cyan-500/20"
           }`}
         >
           {isCaller ? (
@@ -98,20 +98,20 @@ export default function FileTransfer() {
         </span>
       </div>
 
-      <div className="flex items-center gap-2 text-sm text-gray-400 bg-gray-950/50 p-3 rounded-lg border border-gray-800">
+      <div className="flex items-center gap-2 text-sm text-slate-400 bg-slate-950/50 p-3 rounded-lg border border-slate-800">
         {channelReady ? (
           <>
-            <div className="w-2 h-2 rounded-full bg-green-500" />
-            <span className="text-gray-300">Channel secure & ready</span>
+            <div className="w-2 h-2 rounded-full bg-emerald-500" />
+            <span className="text-slate-300">Channel secure & ready</span>
           </>
         ) : isConnecting ? (
           <>
-            <Loader2 size={14} className="animate-spin text-yellow-500" />
+            <Loader2 size={14} className="animate-spin text-amber-500" />
             <span>Establishing connection...</span>
           </>
         ) : (
           <>
-            <div className="w-2 h-2 rounded-full bg-gray-500" />
+            <div className="w-2 h-2 rounded-full bg-slate-600" />
             <span>Not connected</span>
           </>
         )}
@@ -120,7 +120,7 @@ export default function FileTransfer() {
       {isCaller && (
         <div className="space-y-6">
           <div className="space-y-2">
-            <label className="block font-medium text-gray-300 text-sm">
+            <label className="block font-medium text-slate-300 text-sm">
               Select file to send
             </label>
 
@@ -129,15 +129,15 @@ export default function FileTransfer() {
                 type="file"
                 disabled={!channelReady}
                 onChange={handleSendFile}
-                className="block w-full text-sm text-gray-400
+                className="block w-full text-sm text-slate-400
                    file:mr-4 file:py-2.5 file:px-4
                    file:rounded-lg file:border-0
                    file:text-sm file:font-semibold
-                   file:bg-blue-600 file:text-white
-                   hover:file:bg-blue-500
+                   file:bg-emerald-600 file:text-white
+                   hover:file:bg-emerald-500
                    file:cursor-pointer file:transition-colors
                    cursor-pointer
-                   bg-gray-800/50 rounded-lg border border-gray-700
+                   bg-slate-800/50 rounded-lg border border-slate-700
                  "
               />
             </div>
@@ -145,13 +145,13 @@ export default function FileTransfer() {
 
           {sendProgress > 0 && (
             <div className="space-y-2">
-              <div className="flex justify-between text-xs font-medium text-gray-400">
+              <div className="flex justify-between text-xs font-medium text-slate-400">
                 <span>Sending...</span>
                 <span>{sendProgress}%</span>
               </div>
-              <div className="w-full bg-gray-800 rounded-full h-2.5 overflow-hidden">
+              <div className="w-full bg-slate-800 rounded-full h-2.5 overflow-hidden">
                 <div
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 h-full rounded-full transition-all duration-300 ease-out"
+                  className="bg-gradient-to-r from-emerald-600 to-cyan-500 h-full rounded-full transition-all duration-300 ease-out"
                   style={{ width: `${sendProgress}%` }}
                 />
               </div>
@@ -163,12 +163,12 @@ export default function FileTransfer() {
       {!isCaller && (
         <div className="space-y-6">
           {!receivedFile && !receiveProgress && (
-            <div className="text-center py-8 border-2 border-dashed border-gray-800 rounded-2xl bg-gray-900/50">
+            <div className="text-center py-8 border-2 border-dashed border-slate-800 rounded-2xl bg-slate-900/50">
               <Loader2
                 size={32}
-                className="mx-auto text-gray-600 animate-spin mb-3"
+                className="mx-auto text-slate-600 animate-spin mb-3"
               />
-              <p className="text-gray-400 text-sm">
+              <p className="text-slate-400 text-sm">
                 Waiting for sender to start...
               </p>
             </div>
@@ -176,13 +176,13 @@ export default function FileTransfer() {
 
           {receiveProgress > 0 && receiveProgress < 100 && (
             <div className="space-y-2">
-              <div className="flex justify-between text-xs font-medium text-gray-400">
+              <div className="flex justify-between text-xs font-medium text-slate-400">
                 <span>Receiving...</span>
                 <span>{receiveProgress}%</span>
               </div>
-              <div className="w-full bg-gray-800 rounded-full h-2.5 overflow-hidden">
+              <div className="w-full bg-slate-800 rounded-full h-2.5 overflow-hidden">
                 <div
-                  className="bg-gradient-to-r from-green-600 to-emerald-400 h-full rounded-full transition-all duration-300 ease-out"
+                  className="bg-gradient-to-r from-cyan-600 to-emerald-400 h-full rounded-full transition-all duration-300 ease-out"
                   style={{ width: `${receiveProgress}%` }}
                 />
               </div>
@@ -190,25 +190,25 @@ export default function FileTransfer() {
           )}
 
           {receivedFile && (
-            <div className="border border-green-500/30 rounded-xl p-5 bg-green-500/5 space-y-4">
+            <div className="border border-emerald-500/30 rounded-xl p-5 bg-emerald-500/5 space-y-4">
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-green-500/20 rounded-lg">
-                  <CheckCircle className="text-green-500" size={24} />
+                <div className="p-3 bg-emerald-500/20 rounded-lg">
+                  <CheckCircle className="text-emerald-500" size={24} />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="font-semibold text-green-400 text-sm">
+                  <p className="font-semibold text-emerald-400 text-sm">
                     File Received Successfully
                   </p>
                   <div className="flex items-center gap-2 mt-1">
                     <FileText
                       size={14}
-                      className="text-gray-400 flex-shrink-0"
+                      className="text-slate-400 flex-shrink-0"
                     />
-                    <p className="text-sm text-gray-300 truncate">
+                    <p className="text-sm text-slate-300 truncate">
                       {receivedFile.name}
                     </p>
                   </div>
-                  <p className="text-xs text-gray-500 mt-1 font-mono">
+                  <p className="text-xs text-slate-500 mt-1 font-mono">
                     {(receivedFile.size / 1024).toFixed(2)} KB
                   </p>
                 </div>
@@ -216,7 +216,7 @@ export default function FileTransfer() {
 
               <button
                 onClick={handleDownload}
-                className="w-full flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white py-2.5 rounded-lg transition-all shadow-lg shadow-green-900/20 font-medium text-sm"
+                className="w-full flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white py-2.5 rounded-lg transition-all shadow-lg shadow-emerald-900/20 font-medium text-sm"
               >
                 <Download size={16} /> Download File
               </button>

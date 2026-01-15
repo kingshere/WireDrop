@@ -29,7 +29,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="bg-gradient-to-br from-white to-slate-400 bg-clip-text text-5xl font-bold tracking-tight text-transparent md:text-7xl"
         >
-          Share files.Directly. <br />
+          Exchange files.Directly. <br />
         </motion.h1>
 
         <motion.p
@@ -38,9 +38,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mx-auto max-w-2xl text-lg text-slate-400 md:text-xl"
         >
-          WireDrop lets you share files instantly using direct peer-to-peer
-          connections in the browser. No uploads. No storage. Just real-time
-          transfer.
+          Through direct peer-to-peer connections in the browser, WireDrop enables instantaneous file sharing. Not a single upload. No storage. Only in real time.
         </motion.p>
 
         <motion.div
