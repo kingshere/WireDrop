@@ -38,7 +38,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mx-auto max-w-2xl text-lg text-gray-400 md:text-xl"
         >
-          Peerly lets you share files instantly using direct peer-to-peer
+          WireDrop lets you share files instantly using direct peer-to-peer
           connections in the browser. No uploads. No storage. Just real-time
           transfer.
         </motion.p>

@@ -43,7 +43,7 @@ function P2PAppContent() {
       <div className="md:hidden bg-gray-900 border-b border-gray-800 px-4 py-3 flex items-center justify-between z-20 sticky top-0">
         <div className="flex items-center gap-2">
           <Share2 className="text-blue-500" size={20} />
-          <h1 className="text-xl font-bold font-mono">Peerly</h1>
+          <h1 className="text-xl font-bold font-mono">WireDrop</h1>
         </div>
         <button
           onClick={() => setIsSidebarOpen(!isSidebarOpen)}
@@ -76,7 +76,7 @@ function P2PAppContent() {
             <div className="p-2 bg-blue-500/10 rounded-lg">
               <Share2 className="text-blue-500" size={24} />
             </div>
-            <h1 className="text-xl font-bold font-mono">Peerly</h1>
+            <h1 className="text-xl font-bold font-mono">WireDrop</h1>
           </div>
           <p className="text-sm text-gray-500 ml-1">
             Secure WebRTC File Transfer
@@ -369,7 +369,7 @@ function P2PAppContent() {
 
 export default function P2PApp() {
   const [name, setName] = useState<string | null>(() => {
-    return localStorage.getItem("peerly-username");
+    return localStorage.getItem("WireDrop-username");
   });
   const [nameInput, setNameInput] = useState("");
 
@@ -384,7 +384,7 @@ export default function P2PApp() {
                 <User size={32} className="text-blue-500" />
               </div>
               <h3 className="text-xl font-bold text-white">
-                Welcome to Peerly
+                Welcome to WireDrop
               </h3>
               <p className="text-gray-400 text-sm mt-2">
                 Enter your name to get started
@@ -400,7 +400,7 @@ export default function P2PApp() {
               autoFocus
               onKeyDown={(e) => {
                 if (e.key === "Enter" && nameInput.trim()) {
-                  localStorage.setItem("peerly-username", nameInput.trim());
+                  localStorage.setItem("WireDrop-username", nameInput.trim());
                   setName(nameInput.trim());
                 }
               }}
@@ -409,7 +409,7 @@ export default function P2PApp() {
             <button
               onClick={() => {
                 if (nameInput.trim()) {
-                  localStorage.setItem("peerly-username", nameInput.trim());
+                  localStorage.setItem("WireDrop-username", nameInput.trim());
                   setName(nameInput.trim());
                 }
               }}

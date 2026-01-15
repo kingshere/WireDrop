@@ -70,7 +70,7 @@ export default function Features() {
             transition={{ delay: 0.1 }}
             className="mt-4 text-lg text-gray-400"
           >
-            Built for speed and simplicity. Peerly enables direct browser-to-browser
+            Built for speed and simplicity. WireDrop enables direct browser-to-browser
             file transfers using WebRTC.
           </motion.p>
         </div>

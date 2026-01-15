@@ -7,7 +7,7 @@ export default function Technology() {
           </h2>
           <div className="rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12">
             <p className="text-lg leading-relaxed text-gray-300">
-              Peerly uses <span className="text-blue-400 font-medium">WebSockets</span> purely for signaling and peer discovery. 
+              WireDrop uses <span className="text-blue-400 font-medium">WebSockets</span> purely for signaling and peer discovery. 
               Once connected, all file data flows directly between peers using <span className="text-purple-400 font-medium">WebRTC DataChannels</span>.
               There is <span className="text-white font-semibold">no server-side file handling or storage</span>.
             </p>

@@ -26,7 +26,7 @@ const detailedSteps = [
   {
     icon: FileUp,
     title: "5. Backpressure",
-    desc: "Peerly monitors the bufferedAmount to pause/resume sending, ensuring optimal network usage.",
+    desc: "WireDrop monitors the bufferedAmount to pause/resume sending, ensuring optimal network usage.",
   },
   {
     icon: CheckCircle,

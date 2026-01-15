@@ -70,7 +70,7 @@ export function WSProvider({
   // Function to update name (for edits)
   function setMyName(newName: string) {
     setMyNameState(newName);
-    localStorage.setItem("peerly-username", newName);
+    localStorage.setItem("WireDrop-username", newName);
     if (ws.ws.readyState === WebSocket.OPEN) {
       ws.send("register-name", { name: newName });
     }

@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="border-t border-white/10 bg-gray-950 py-12 text-white">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 md:flex-row">
         <div className="flex items-center gap-2">
-          <span className="text-xl font-bold">Peerly</span>
+          <span className="text-xl font-bold">WireDrop</span>
           <span className="text-sm text-gray-500">© 2025</span>
         </div>
 
